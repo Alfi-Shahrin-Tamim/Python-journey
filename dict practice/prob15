@@ -1,0 +1,8 @@
+sentence = "hello world"
+chars = 0
+
+for c in sentence:
+    if c.isalpha():
+        chars += 1
+
+print(chars)
