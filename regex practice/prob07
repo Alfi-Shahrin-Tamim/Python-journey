@@ -1,0 +1,10 @@
+import re
+
+text = input("Say something: ")
+
+find = re.search(r"\bcat\b", text)
+
+if find:
+   print("Contains cat")
+else:
+   print("Contains others")
