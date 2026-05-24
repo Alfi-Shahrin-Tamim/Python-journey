@@ -1,0 +1,15 @@
+orders = {
+    "Alice": {"apple": 3, "banana": 2},
+    "Bob": {"mango": 1, "grape": 4}
+}
+
+prices = {
+    "apple": 1.0,
+    "banana": 0.5,
+    "mango": 2.0,
+    "grape": 1.5
+}
+
+for name, info in orders.items():
+    total = sum(info[item] * prices[item] for item in info)
+    print(f"{name}'s cost is {total}")
