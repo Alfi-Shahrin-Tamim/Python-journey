@@ -1,0 +1,8 @@
+people = {"Alice": 25, "Bob": 30, "Charlie": 22}
+
+if "Alice" in people:
+    print("Alice is in dictionary")
+else:
+    print("Alice is not in dictionary")
+
+print("David" in people)
