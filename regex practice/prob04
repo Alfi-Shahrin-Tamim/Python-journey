@@ -1,0 +1,10 @@
+import re
+
+text = input("Say something: ")
+
+check = re.search(r"world$", text, re.IGNORECASE)
+
+if check:
+    print("Does end with world")
+else:
+    print("Doesn't end with world")    
