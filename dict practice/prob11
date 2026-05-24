@@ -1,0 +1,9 @@
+words = ["cat", "dog", "cat", "bird", "dog", "cat"]
+
+d = {}
+
+for name in words:
+    d[name] = d.get(name, 0) + 1
+
+for name, count in d.items():
+    print(f"{name} : {count}")
