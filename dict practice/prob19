@@ -1,0 +1,7 @@
+d = {"apple": 60, "orange": 80, "banana": 45, "mango": 90, "strawberry": 95}
+
+bar = int(input("What is the minimum value? "))
+
+for name, value in d.items():
+    if value > bar:
+        print(f"{name}: {value}")
