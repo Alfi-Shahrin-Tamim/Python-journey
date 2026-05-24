@@ -1,0 +1,7 @@
+import re
+
+text = input("Say something: ")
+
+words = re.findall(r"[a-zA-Z]+", text)
+
+print(words)
