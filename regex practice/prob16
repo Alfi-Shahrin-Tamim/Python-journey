@@ -1,0 +1,7 @@
+import re
+
+text = input("Say something: ")
+
+find = re.findall(r"(\d{4})-(\d{2})-(\d{2})", text)
+
+print(find)
