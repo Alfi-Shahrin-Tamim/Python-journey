@@ -1,0 +1,7 @@
+import re
+
+text = input("Say something: ")
+
+find = re.split(r"[,|;]+", text)
+
+print(find)
