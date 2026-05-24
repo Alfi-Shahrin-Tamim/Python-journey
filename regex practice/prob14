@@ -1,0 +1,10 @@
+import re
+
+text = input("Say something: ")
+
+find = re.fullmatch(r"#([a-fA-F0-9]{3}|[a-fA-F0-9]{6})", text)
+
+if find:
+    print("valid")
+else:
+    print("invalid")
