@@ -1,0 +1,15 @@
+item = {"apple": 60, "orange": 80, "banana": 45, "mango": 90, "strawberry": 95}
+
+bar = int(input("What is the minimum value? "))
+
+def filt(d, val):
+    new = {}
+    for name, value in d.items():
+        if value >= val:
+            new[name] = value
+    return new
+
+new2 = filt(item, bar)
+
+for name, value in new2.items():
+    print(f"{name}: {value}")
