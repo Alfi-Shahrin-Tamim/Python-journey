@@ -1,0 +1,8 @@
+original = {"a": 1, "b": 2, "c": 3}
+new = {}
+
+for key, value in original.items():
+    new[value] = key
+
+for key, value in new.items():
+    print(f"{key}: {value}")
