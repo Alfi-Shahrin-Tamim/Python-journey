@@ -1,0 +1,8 @@
+import re
+text = input("Say something: ")
+match = re.search(r"\d", text)
+
+if match:
+    print("Contains digit")
+else:
+    print("Doesn't contain digit")
