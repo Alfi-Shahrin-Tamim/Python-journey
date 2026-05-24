@@ -1,0 +1,15 @@
+students = {
+    "Alice": {"score": 88, "grade": "B"},
+    "Bob": {"score": 95, "grade": "A"},
+    "Charlie": {"score": 76, "grade": "C"}
+}
+
+hname = None
+hscore = -1
+
+for name, info in students.items():
+    if info["score"] > hscore:
+        hname = name
+        hscore = info["score"]
+
+print(f"{hname}: {hscore}")
