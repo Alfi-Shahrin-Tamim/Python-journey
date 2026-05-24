@@ -1,0 +1,3 @@
+prices = {"apple": 1.2, "banana": 0.5, "mango": 2.8, "grape": 1.9}
+
+print(max(prices, key=prices.get))
