@@ -1,0 +1,10 @@
+import re
+
+text = input("Say something: ")
+
+check = re.search(r"^hello", text, re.IGNORECASE)
+
+if check:
+    print("Does start with hello")
+else:
+    print("Doesn't start with hello")    
