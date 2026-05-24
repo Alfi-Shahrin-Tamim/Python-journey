@@ -1,0 +1,15 @@
+people = {"Alice": 25, "Bob": 30, "Charlie": 22}
+
+for name in people.keys():
+    if people["Alice"]:
+        print("Alice is in dictionary")
+        break
+    else:
+        print("Alice is not in dictionary")
+
+statement = "False"
+for name in people.keys():
+    if name == "David":
+        statement = "True"
+
+print(statement)
