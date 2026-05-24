@@ -1,0 +1,9 @@
+people = {"Alice": 25, "Bob": 30, "Charlie": 22}
+
+for name, age in people.items():
+    print(f"{name} is {age}")
+
+people.clear()
+
+for name, age in people.items():
+    print(f"{name} is {age}")
