@@ -1,0 +1,7 @@
+import re
+
+text = "abc 12 def 345 ghi 6"
+
+digits = re.findall(r"\d+", text)
+
+print(digits)
