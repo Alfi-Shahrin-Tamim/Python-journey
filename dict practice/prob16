@@ -1,0 +1,10 @@
+sentence = "hello world"
+
+d = {}
+
+for c in sentence:
+    if not c == " ":
+        d[c] = d.get(c, 0) + 1
+
+for char, count in d.items():
+    print(f"{char}: {count}")
