@@ -1,0 +1,16 @@
+data = [
+    ("Alice", "Math"),
+    ("Bob", "Science"),
+    ("Charlie", "Math"),
+    ("David", "Science"),
+    ("Eve", "Math")
+]
+
+groups = {}
+
+for name, subject in data:
+    if subject not in groups:
+        groups[subject] = []
+    groups[subject].append(name)
+
+print(groups)
