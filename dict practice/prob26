@@ -1,0 +1,9 @@
+students = {
+    "Alice": {"score": 88, "grade": "B"},
+    "Bob": {"score": 95, "grade": "A"},
+    "Charlie": {"score": 76, "grade": "C"}
+}
+
+best = max(students, key=lambda x: students[x]["score"])
+
+print(f"{best}: {students[best]['score']}")
