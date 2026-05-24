@@ -1,0 +1,16 @@
+nested = {
+    "a": {"b": 1, "c": 2},
+    "d": 3
+}
+
+new = {}
+
+for char, value in nested.items():
+    if isinstance(value, dict):
+        for char1 in value:
+            name = char + "." + char1
+            new[name] = value[char1]
+    else:
+        new[char] = nested[char]
+
+print(new)
