@@ -1,0 +1,17 @@
+import re
+
+def main():
+    print(parse(input("HTML: ")))
+
+
+def parse(s):
+    find = re.search(r"https?://(?:www\.)?youtube\.com/embed/([\w-]+)", s) 
+
+    if find:
+        short = f"https://youtu.be/{find.group(1)}"
+        return short
+    return None
+
+
+if __name__ == "__main__":
+    main()
