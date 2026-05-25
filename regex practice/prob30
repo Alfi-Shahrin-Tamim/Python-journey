@@ -1,0 +1,18 @@
+import re
+data = []
+lines = """2026-05-23 10:45:01 ERROR Database connection failed
+2026-05-23 10:45:03 INFO Server restarted
+2026-05-23 10:46:00 WARNING Memory usage high"""
+
+text = lines.splitlines()
+
+for line in text:
+    d = {}
+    matches = re.search(r"(\d{4}-\d{2}-\d{2}\s\d{2}:\d{2}:\d{2})\s([A-Z]{2,})\s(.+)$", line)
+    if matches:
+       d["timestamp"] = matches.group(1)
+       d["level"] = matches.group(2)
+       d["message"] = matches.group(3)
+       data.append(d)
+
+print(data)    
