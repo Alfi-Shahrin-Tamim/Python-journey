@@ -1,0 +1,7 @@
+import re
+
+text = input("Say something: ")
+
+find = re.findall(r"\b(?=.*[aeiou])(?=.*[b-df-hj-np-tv-z])[a-zA-Z]{2,}\b" ,text)
+
+print(find)
