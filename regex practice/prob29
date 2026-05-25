@@ -1,0 +1,7 @@
+import re
+
+text = input("Say something: ")
+
+find = re.sub(r"[\w.-]+@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,4}" ,"[REDACTED]" ,text)
+
+print(find)
