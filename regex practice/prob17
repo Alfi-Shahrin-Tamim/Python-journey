@@ -1,0 +1,7 @@
+import re
+
+text = input("Say something: ")
+
+find = re.findall(r"(?:https?)://(?:www\.)?[a-zA-Z0-9-]+\.(?:com|edu|org|net)", text)
+
+print(find)
