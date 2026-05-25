@@ -1,0 +1,10 @@
+import re
+
+text = input("Say something: ")
+
+find = re.fullmatch(r"[\w.-]+@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,4}" ,text)
+
+if find:
+    print("valid")
+else:
+    print("invalid")    
