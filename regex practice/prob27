@@ -1,0 +1,13 @@
+import re
+
+text = input("Say something: ")
+
+find = re.findall(r"([a-zA-Z]+)", text.lower())
+
+d = {}
+for word in find:
+    d[word] = d.get(word, 0) + 1
+
+d1 = {word: value for word, value in d.items() if value > 1}
+
+print(d1)
