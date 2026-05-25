@@ -1,0 +1,7 @@
+import re
+
+text = input("Say something: ")
+
+find = re.sub(r"([A-Za-z]+)\s+([a-zA-Z]+)",r"\2 \1" ,text)
+
+print(find)
