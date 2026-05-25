@@ -1,0 +1,7 @@
+import re
+
+text = input("Say something: ")
+
+find = re.findall(r"\b[a-zA-Z]{4}\b" ,text)
+
+print(find)
