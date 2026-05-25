@@ -1,0 +1,7 @@
+import re
+
+text = input("Say something: ")
+
+find = re.findall(r"\$\d+(?:\.\d{1,2})?", text)
+
+print(find)
