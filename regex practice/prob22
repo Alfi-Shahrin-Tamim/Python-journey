@@ -1,0 +1,7 @@
+import re
+
+text = input("Say something: ")
+
+find = re.findall(r"\((\w+)\)", text)
+
+print(find)
