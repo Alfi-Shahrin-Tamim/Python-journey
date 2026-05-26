@@ -1,0 +1,13 @@
+import pytest
+from um import count
+
+def test_count():
+    assert count("hello um, negar um, nargo um.") == 3
+    assert count("sam") == 0
+    assert count("hector (um) salamanca") == 1
+    assert count("um um um um") == 4
+    assert count("UM UM UM") == 3
+    assert count("Um Um uM") == 3
+    assert count("hello, um, well, um, okay, um.") == 3
+    assert count("yummy noum") == 0
+    assert count("youmar") == 0
