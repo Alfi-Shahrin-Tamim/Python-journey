@@ -1,0 +1,16 @@
+import pytest
+from numb3rs import validate
+
+def test_valid():
+    assert validate("255.255.255.255") == True
+    assert validate("192.168.0.1") == True
+    assert validate("1.1.1.1") == True
+    assert validate("20.20.20.20") == True
+
+def test_invalid():
+    assert validate("32.43.54") == False   
+    assert validate("256.255.255.255") == False 
+    assert validate("1.1.1.2584") == False
+    assert validate("32") == False   
+    assert validate("cat") == False
+   
