@@ -1,0 +1,40 @@
+import re
+
+def main():
+    print(convert(input("Hours: ")))
+
+def convert(s):
+    fig = re.fullmatch(r"(1[0-2]|[1-9])(?:\:(\d{2}))?\s(AM|PM)\sto\s(1[0-2]|[1-9])(?:\:(\d{2}))?\s(AM|PM)", s)  
+    if fig:
+           time1 = fig.group(3)
+           time2 = fig.group(6)
+           num1 = fig.group(1)
+           num1 = int(num1)
+           num2 = fig.group(2)
+           num2 = int(num2 or 0)         
+           num3 = fig.group(4)
+           num3 = int(num3) 
+           num4 = fig.group(5)
+           num4 = int(num4 or 0)
+           if time1 == "PM":
+                if num1 < 12:
+                   num1 = num1 + 12
+           else:
+               if num1 == 12:
+                   num1 = 0        
+           if time2 == "PM":
+                if num3 < 12:
+                   num3 = num3 + 12
+           else:
+               if num3 == 12:
+                   num3 = 0            
+           if (num2 > 59 or num2 < 0) or (num4 > 59 or num4 < 0):
+                raise ValueError
+           new_fig = f"{num1:02}:{num2:02} to {num3:02}:{num4:02}"
+           return new_fig
+    else:           
+        raise ValueError
+
+    
+if __name__ == "__main__":
+    main()
