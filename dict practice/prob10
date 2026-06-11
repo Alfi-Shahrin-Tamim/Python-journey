@@ -2,4 +2,4 @@ scores = {"Alice": 85, "Bob": 60, "Charlie": 90, "David": 55}
 
 for name, scr in scores.items():
     if scr > 70:
-        print(f"{name} {scr}")
+        print(f"{name} {scr}")  
